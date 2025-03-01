@@ -1,3 +1,13 @@
+● Auto Rename Tag - Tự động sửa tên thẻ.
+● Beautify - Làm đẹp code
+● Color Highlight - Hiển thị màu sắc theo mã màu
+● CSS Variables Autocomplete - Gợi ý các biến trong CSS để code nhanh hơn.
+● HTML Boilerplate - Tạo khung HTML được soạn sẵn.
+● HTML Snippets - Gợi ý code HTML
+● Live Server - Khi lưu code thì web tự load lại
+● Material Icon Theme - Icon cho theme dễ nhìn hơn
+● Path Intellisense - Gợi ý đường dẫn các file
+-------------------------------------------------------------------------------------------------
 #1 cấu trúc chung của 1 html 
 <!DOCTYPE html>     <!-- khai báo đây là kiểu tài liệu html -->
 <html lang="en">    <!-- khai báo các nội dung trong trang như head và body -->
@@ -11,12 +21,59 @@
     <p>This is a paragraph.</p>
 </body>            
 </html>
-NOTE: Trong HTML, hầu hết các thẻ đều có thẻ mở và thẻ đóng
-ví dụ <head> </head>   phần thẻ đóng trước nó sẽ có dấu "/"
-+ khi báo head và body phần code sẽ phải có khoảng cách 4 ô 
+
+NOTE: Elements (phần tử) : thẻ mở - nội dung - thẻ đóng
+<h1>: Thẻ mở của element
+"Tiêu đề lớn": Nội dung của element
+</h1>: Thẻ đóng của element
+● Cú pháp: <tagname>Nội dung...</tagname>
+
++ khi báo head và body phần code sẽ phải có khoảng cách 1 tab
 ví dụ : 
 <head> 
-    <meta charset="UTF-8">
+    <title>Document</title>
 </head>
+
 #2 phần tiêu đề của 1 trang web 
-  <title>tiêu đề</title> <!-- chỉ khai báo trong head -->
+  <title>tiêu đề</title>     <!-- chỉ khai báo trong head -->
+
+#3 Comments : dùng để note , phím tắt Ctrl + / 
+Cú pháp: <!-- Nội dung comment -->
+
+#4 Attributes (thuộc tính) : cung cấp thông tin , nằm trong thẻ mở 
+<html lang="vi"></html> 
+Trong đó:
+    ● lang: là thuộc tính
+    ● "vi": là giá trị của thuộc tính lang   <!-- giá trị thuộc tính phải có " " -->
+
++ 1 phần tử có thể nhiều thuộc tính
+<h1 lang ="vi" id="abc">Test</h1>
+
+#5 Headings (tiêu đề) : có 6 tiêu đề trên 1 trang web  
+    <h1></h1> (Thẻ tiêu đề quan trọng nhất và có chữ lớn nhất)
+    <h2></h2>
+    <h3></h3>
+    <h4></h4>
+    <h5></h5>
+    <h6></h6> (Thẻ tiêu đề ít quan trọng nhất)
+
+#6 Paragraphs (đoạn văn) : là một khối văn bản có thể nhiều hoặc ít 
+Cú pháp: <p> nội dung văn bản </p>
+
+#7 Formatting (định dạng) : hiển thị văn bản đặc biệt 
+● <b></b> (bold - in đậm): Văn bản in đậm
+● <i></i> (italic - in nghiêng): Văn bản in nghiêng
+● <sub></sub> (subscripted - chỉ số dưới): Văn bản có chỉ số dưới
+● <sup></sup> (superscripted - chỉ số trên): Văn bản có chỉ số trên
+● <del></del> (deleted - đã xóa): Văn bản đã xóa
+NOTE : kết hợp nhiều thẻ với nhau  ví dụ : <p>H<sub>2</sub>SO<sub>4</sub></p> 
+
+#8 Links (anchor - mỏ neo) : khi click vào nó sẽ chuyển hướng trang khác 
+Cú pháp: <a href="url">link text</a>
+trong đó :
+    ● <a> (Anchor - Liên kết) <!--Dùng để tạo liên kết đến trang web khác Có thuộc tính href để chỉ định đường dẫn đích -->
+    ● href: chèn địa chỉ liên kết.
+    ● target: Xác định nơi mà tài liệu được mở. Có 2 giá trị phổ biến:
+    ● _self: Mặc định. Mở tài liệu ở tab hiện tại.
+    ● _blank: Mở tài liệu trong tab mới.
+    ● title: Thông tin bổ sung về một element.   
