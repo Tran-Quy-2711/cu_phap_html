@@ -74,6 +74,24 @@ trong đó :
     ● <a> (Anchor - Liên kết) <!--Dùng để tạo liên kết đến trang web khác Có thuộc tính href để chỉ định đường dẫn đích -->
     ● href: chèn địa chỉ liên kết.
     ● target: Xác định nơi mà tài liệu được mở. Có 2 giá trị phổ biến:
-    ● _self: Mặc định. Mở tài liệu ở tab hiện tại.
-    ● _blank: Mở tài liệu trong tab mới.
+        ● _self: Mặc định. Mở tài liệu ở tab hiện tại.  <!-- không cần dùng target="_self", vì web đã mặc định --> 
+        ● _blank: Mở tài liệu trong tab mới.    <!-- nếu cần chuyển sang tab khác dùng target="_blank" -->
     ● title: Thông tin bổ sung về một element.   
+
+#9 Image (Hình ảnh) : dùng nhúng ảnh vào web 
+Cú pháp: <img src="hinh-anh.jpg" alt="Mô tả..." />
+Thuộc tính:
+    ● src: Chèn đường dẫn ảnh
+    ● alt: Văn bản thay thế khi đường dẫn ảnh bị lỗi.
+Lưu ý: Không có thẻ đóng.
+
+#10 Trong HTML và hệ thống tệp, có hai loại đường dẫn tệp chính:
+● Absolute File Paths (Đường dẫn tệp tuyệt đối) : Là URL đầy đủ của tệp.
+<img src="https://cdn.daca.vn/media/logo/logo.svg" alt="Logo Daca.vn" />
+● Relative File Paths (Đường dẫn tệp tương đối) : Là trỏ đến một tệp liêna quan đến cấu trúc thư mục của trang hiện tại.
+1. Ảnh "image.jpg" nằm cùng thư mục với trang hiện tại 
+<img src="image.jpg" />   <!-- tải về bỏ vào mục đó-->
+2. Ảnh "image.jpg" nằm trong thư mục images trong thư mục hiện tại 
+<img src="images/image.jpg" />   <!-- tạo 1 mục images phụ trong mục chính lưu ảnh vào img -->
+3. Ảnh "image.jpg" nằm trong thư mục tăng một cấp so với thư mục hiện tại -->
+<img src="../image.jpg">
