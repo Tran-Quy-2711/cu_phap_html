@@ -95,3 +95,54 @@ Lưu ý: Không có thẻ đóng.
 <img src="images/image.jpg" />   <!-- tạo 1 mục images phụ trong mục chính lưu ảnh vào img -->
 3. Ảnh "image.jpg" nằm trong thư mục tăng một cấp so với thư mục hiện tại -->
 <img src="../image.jpg">
+
+#11 Thẻ video : dùng nhúng video vào web , trong thẻ có thẻ <<source> để chứa dường dẫn file video
+cú pháp: 
+<video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+</video>
+Thuộc tính thẻ video:
+    ● width/height: Chiều rộng và chiều cao của video.
+    ● controls: Thanh điều khiển (như: bật, tạm dừng, âm lượng).
+    ● loop: Lặp lại.
+    ● autoplay: Tự động phát.
+    ● muted: Tắt tiếng.
+Thuộc tính thẻ source:
+    ● src: Đường dẫn file.
+    ● type: Kiểu video (mp4, ogg, webm).
+
+#12 Thẻ audio: dùng nhúng audio(âm thanh) vào web , Trong thẻ có thẻ <source> để chứa đường dẫn file audio.
+Cú pháp:
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+</audio>
+Thuộc tính thẻ audio:
+    ● controls: Thanh điều khiển (như: bật, tạm dừng, âm lượng).
+    ● loop: Lặp lại.
+    ● autoplay: Tự động phát.
+    ● muted: Tắt tiếng.
+Thuộc tính thẻ audio:
+    ● src: Đường dẫn file.
+    ● type: Kiểu audio (mpeg - là mp3, ogg, webm, wav).
+
+#13 Thẻ table: dùng để chèn bảng vào trang web.
+Cú pháp:
+<table>
+    <thead>                          <!-- là phần trên (tiêu đề) -->
+        <tr>                         <!-- 1 <tr> gọi là 1 hàng -->
+            <th>Hàng 1 Cột 1</th>    <!-- <th> :Tiêu đề này thường in đậm và căn giữa mặc định -->
+            <th>Hàng 1 Cột 2</th>
+            <th>Hàng 1 Cột 3</th>
+        </tr>
+    </thead> 
+    <tbody>                          <!-- là phần dưới (chứa dữ liệu bảng) -->
+        <tr>
+            <td>Hàng 2 Cột 1</td>    <!-- <td> : chữ in thường -->
+            <td>Hàng 2 Cột 2</td>
+            <td>Hàng 2 Cột 3</td>
+        </tr>
+    </tbody>
+</table>
+    
+cú pháp tạo bảng nhanh : ví dụ 4 hàng 3 cột : tr*4>td*3 
+<td rowspan="giá trị cần chiếm vd: 5">  <!-- dùng chiếm ô bảng -->
