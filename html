@@ -174,7 +174,58 @@ NOTE: Thuộc tính type của thẻ ol chỉ có trong ol:
     ● type="I": Các mục đánh dạng số La Mã viết hoa.
     ● type="i": Các mục đánh dạng số La Mã viết thường.
 
-#15 Phân biệt: block và inline 
+#15 Form: biểu mẫu được sử dụng để thu thập thông tin.     <!--đi kèm với nó thuộc tính action=" " -->
+Form Attributes (Thuộc tính của form) 
+● action : 
+    <form action="https://www.w3schools.com/action_page.php">  
+        <!-- action (giống với href) nhưng gửi dữ liệu biểu mẫu đến một URL xử lý khi nhấn Submit-->
+    </form>
+● target : target="_self" , target="_blank"
+● method : Chỉ định giao thức HTTP sẽ được sử dụng khi gửi dữ liệu biểu mẫu, Có 2 phương thức GET và POST.
+Phương thức GET:                                          <!-- không cần vì from mặc định là GET -->
+    ● Nối dữ liệu biểu mẫu vào URL, theo cặp name/value.
+    ● KHÔNG BAO GIỜ sử dụng GET để gửi dữ liệu bảo mật.
+    ● Độ dài của URL bị giới hạn (2048 ký tự).    
+<form action="https://www.w3schools.com/action_page.php" method="GET">
+    <!-- Code trong này -->
+</form>
+Phương thức POST:
+    ● Dữ liệu gửi đi không hiển thị trên URL.
+    ● Không có giới hạn về kích thước.
+    ● Có thể được sử dụng để gửi một lượng lớn dữ liệu.
+● autocomplete : Tính năng tự động điền,Trình duyệt sẽ gợi ý các giá trị mà người dùng đã nhập trước đó.
+    <form action="https://www.w3schools.com/action_page.php" autocomplete="on">
+        <!-- không cần vì trình duyệt nó sẽ tự động hiển thị gợi ý -->
+    </form>
+● novalidate : Không cần phải kiểm tra định dạnh chính xác dữ liệu khi gửi đi.
+    <!-- vd: tk cần phải có @ nếu dùng novalidate thì không cần dùng -->
+    <form action="https://www.w3schools.com/action_page.php" novalidate>
+        <!-- Code trong này -->
+    </form>
+
+Form Elements (Element trong form)
+● <input> : Hiển thị theo nhiều cách, tùy thuộc vào thuộc tính type,Mặc định type="text". 
+ví dụ : <input type="text" name="full_name" />    <!-- khi submit full_name nó sẽ hiện đầu câu --> 
+● <label> : Xác định nhãn cho element trong biểu mẫu,Thuộc tính for của thẻ <label> phải bằng thuộc tính id của element để liên kết chúng lại với nhau.
+<label for="fullName">Họ tên:</label>
+<input type="text" id="fullName" name="full_name" />   <!-- type="text" : đoạn văn ngắn -->
+● <select> : Hiển thị dạng danh sách thả xuống (dropdown),Các thẻ <option> là các tùy chọn để người dùng có thể chọn
+    <label for="colors">Chọn màu sắc:</label>
+    <br />
+    <select id="colors" name="color">
+        <option value="yellow">Vàng</option>
+        <option value="red">Đỏ</option>
+        <!-- lựa chọn mặc định thì thêm thuộc tính selected vào <option> thì màu mặc định-->
+        <option value="green" selected>Xanh lá</option>
+        <option value="black">Đen</option>
+    </select>
+● <textarea> : Dùng để nhập nhiều dòng.
+    <label for="note">Ghi chú:</label>
+    <br />
+    <textarea id="note" name="note"></textarea>
+
+Input Types (Kiểu của ô input) : text,email,password,number,date,time,datetime-local,file,checkbox,radio 
+#16 Phân biệt: block và inline 
 block (khối) : Luôn luôn bắt đầu trên một dòng mới.
     ● <h1>, <h2>, <h3>, <h4>, <h5>, <h6>    <!-- tiêu đề -->                              Đoạn văn 1
     ● <p>                                   <!-- văn bản -->                              Đoạn văn 2
@@ -182,19 +233,6 @@ block (khối) : Luôn luôn bắt đầu trên một dòng mới.
     ● <ul>, <ol>, <li>                      <!-- hiển thị danh sách -->                   Đoạn văn 4
     ● <div>                                                                               Đoạn văn 5
     ● <form>                                                                              Đoạn văn 6
-    
-inline (nội tuyến - trong hàng) : Ở trên cùng một hàng, Chỉ xuống dòng khi hết chiều ngang.
-    ● <a>                                  <!-- dùng liên kết trang web đi cùng với href -->
-    ● <b>                                  <!-- in đậm -->
-    ● <i>                                  <!-- in nghiêng -->
-    ● <img> 
-    ● <button>                             <!-- liên kết với ảnh đi cùng với src -->
-    ● <input>                              Đoạn văn 1  Đoạn văn 2 Đoạn văn 3 Đoạn văn 4 Đoạn
-    ● <label>                              văn 5 Đoạn văn 6
-    ● <select>
-    ● <span>
-    ● <textarea>
-
 NOTE: Phần tử kiểu inline chỉ chứa các phần tử kiểu inline, dữ liệu.
 <span>
     <b>Nội dung...</b>
@@ -209,6 +247,16 @@ Ngoại lệ: thẻ <a> (kiểu inline) có thể chứa phần tử kiểu bloc
 <a href="">
     <p>Nội dung...</p>
 </a>
+   
+inline (nội tuyến - trong hàng) : Ở trên cùng một hàng, Chỉ xuống dòng khi hết chiều ngang.
+    ● <a>                                  <!-- dùng liên kết trang web đi cùng với href -->
+    ● <b>                                  <!-- in đậm -->
+    ● <i>                                  <!-- in nghiêng -->
+    ● <img> 
+    ● <button>                             <!-- liên kết với ảnh đi cùng với src -->
+    ● <input>                              Đoạn văn 1  Đoạn văn 2 Đoạn văn 3 Đoạn văn 4 Đoạn
+    ● <label>                              văn 5 Đoạn văn 6
+    ● <select>
+    ● <span>
+    ● <textarea>
 
-#16 Form: biểu mẫu được sử dụng để thu thập thông tin.  <!-- đi kèm với nó thuộc tính action=" " -- >
-Cú pháp: <form></form>
