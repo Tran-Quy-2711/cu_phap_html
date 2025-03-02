@@ -1,1 +1,155 @@
+● Khái niệm:
+● CSS: viết tắt của Cascading Style Sheets.
+● Được dùng để làm đẹp HTML.
+● Cú pháp: phải ở trong thẻ <style>
+selector {
+  property: value;
+}
+Trong đó:
+  ● selector: Được gọi là bộ chọn.
+  ● property: Được gọi là thuộc tính.
+  ● value: Được gọi là giá trị của thuộc tính.
+
+#1 Selectors (Bộ chọn) CSS được chia thành 5 loại: /* bộ chọn 3-5 không cần chuyên sâu */
+    ● Simple selectors (Bộ chọn đơn giản)
+    ● Combinator selectors (Bộ chọn tổ hợp)
+    ● Pseudo-class selectors (Bộ chọn lớp giả)
+    ● Pseudo-elements selectors (Bộ chọn phần tử giả)
+    ● Attribute selectors (Bộ chọn thuộc tính)
+Simple selectors (Bộ chọn đơn giản)
+● Bộ chọn element (element selector): Chọn các phần tử dựa trên tên phần tử.
+    <style>
+        h1{
+            color:red
+        }
+    </style>
+    <h1>Nội dung thẻ h1</h1>
+● Bộ chọn id (id selector): Chọn các phần tử dựa trên thuộc tính id,bắt buộc phải có ("#") đầu thuộc tính 
+    <style>
+        #test{
+            color:green
+        }
+    </style>
+    <h2 id="test">Nội dung thẻ h2</h2>
+● *Bộ chọn class (class selector): Chọn các phần tử dựa trên thuộc tính class, bắt buộc phải có (".") đầu thuộc tính
+    <style>
+        .abc{
+            color: aqua
+        }
+    </style>
+    <h1 class="abc">Nội dung thẻ h1</h1>
+    <h3 class="abc">Nội dung thẻ h3</h3>
+● Bộ chọn chung (universal selector): Chọn tất cả các phần tử trong thẻ <style>
+    <style>
+        *{
+            text-align: center ;
+        }
+    </style>
+● Bộ chọn nhóm (grouping selector): Chọn tất cả các phần tử, id, class có cùng thuộc tính và giá trị thuộc tính.
+    h1, h2, p {     /* bắt buộc phải có dấu , */
+            text-align: center;
+            color: red;
+}
+#2 Ba kiểu chèn CSS
+● Inline CSS (Nội tuyến): Thêm thuộc tính style vào trong phần tử mà muốn sửa CSS.Chỉ nên dùng nếu chỉ có một phần tử sử dụng đoạn CSS đó.
+            <h2 style="color:red;">Tiêu đề...</h2>
+            <p style="color: orange; font-size: 20px">Đoạn văn...</p>
+● Internal CSS (Nội bộ): Thêm thẻ <style></style> và bất cứ đâu trong file html.Sau đó viết CSS vào trong thẻ <style>.Chỉ nên dùng nếu chỉ có một trang sử dụng đoạn CSS đó.
+    <style>
+            h2 {
+            color: red;
+            }
+    </style>
+    <h2>Tiêu đề 1</h2>
+● *External CSS (Bên ngoài): Thêm một file CSS, sau đó dùng thẻ <link /> đặt ở trong <head></head> và chèn đường dẫn file vào thuộc tính href.Áp dụng cho nhiều trang cần CSS chung.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
