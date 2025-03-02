@@ -147,3 +147,68 @@ Cú pháp:
 cú pháp tạo bảng nhanh : ví dụ 4 hàng 3 cột : tr*4>td*3 
 <td rowspan="5">  <!-- dùng chiếm ô bảng dọc -->
 <td colspan="3">  <!-- dùng xóa ô bảng ngang -->     
+
+#14 Thẻ ul, ol, li
+● Thẻ <ul></ul> (Unordered List - Không sắp xếp) : hiển thị một danh sách,Các mục con được đánh dấu chấm tròn.
+Cú pháp: <ul></ul> <!-- dùng đánh dấu chấm tròn ở đầu câu -->
+<li></li> (List Item): Một mục trong danh sách 
+Lồng nhau : 
+<ul>
+    <li> 
+        Mục 1
+        <ul>                           <!-- Mục con có dấu chấm phụ mục nào để trong li mục đó kèm <ul> -->
+            <li>Mục 1 - 1 </li>  
+            <li>Mục 1 - 2 </li> 
+            <li>Mục 1 - 3 </li>  
+        </ul>
+    </li>
+    <li> Mục 2 </li>
+    <li> Mục 3 </li>  
+</ul>
+
+● Thẻ <ol></ol> (Ordered List - Sắp xếp) : Dùng để hiển thị một danh sách,Các mục con được đánh số thứ tự.
+NOTE: Thuộc tính type của thẻ ol chỉ có trong ol:
+    ● type="1": Mặc định. Các mục đánh dạng số.
+    ● type="A": Các mục đánh dạng chữ hoa.
+    ● type="a": Các mục đánh dạng chữ thường.
+    ● type="I": Các mục đánh dạng số La Mã viết hoa.
+    ● type="i": Các mục đánh dạng số La Mã viết thường.
+
+#15 Phân biệt: block và inline 
+block (khối) : Luôn luôn bắt đầu trên một dòng mới.
+    ● <h1>, <h2>, <h3>, <h4>, <h5>, <h6>    <!-- tiêu đề -->                              Đoạn văn 1
+    ● <p>                                   <!-- văn bản -->                              Đoạn văn 2
+    ● <table>                               <!-- tạo bảng -->                             Đoạn văn 3
+    ● <ul>, <ol>, <li>                      <!-- hiển thị danh sách -->                   Đoạn văn 4
+    ● <div>                                                                               Đoạn văn 5
+    ● <form>                                                                              Đoạn văn 6
+    
+inline (nội tuyến - trong hàng) : Ở trên cùng một hàng, Chỉ xuống dòng khi hết chiều ngang.
+    ● <a>                                  <!-- dùng liên kết trang web đi cùng với href -->
+    ● <b>                                  <!-- in đậm -->
+    ● <i>                                  <!-- in nghiêng -->
+    ● <img> 
+    ● <button>                             <!-- liên kết với ảnh đi cùng với src -->
+    ● <input>                              Đoạn văn 1  Đoạn văn 2 Đoạn văn 3 Đoạn văn 4 Đoạn
+    ● <label>                              văn 5 Đoạn văn 6
+    ● <select>
+    ● <span>
+    ● <textarea>
+
+NOTE: Phần tử kiểu inline chỉ chứa các phần tử kiểu inline, dữ liệu.
+<span>
+    <b>Nội dung...</b>
+</span>
+        
+Phần tử kiểu block thì được chứa các phần tử kiểu block, kiểu inline, dữ liệu.
+<p>
+    <b>Nội dung...</b>
+</p>
+
+Ngoại lệ: thẻ <a> (kiểu inline) có thể chứa phần tử kiểu block.
+<a href="">
+    <p>Nội dung...</p>
+</a>
+
+#16 Form: biểu mẫu được sử dụng để thu thập thông tin.  <!-- đi kèm với nó thuộc tính action=" " -- >
+Cú pháp: <form></form>
