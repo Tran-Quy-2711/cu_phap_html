@@ -49,7 +49,8 @@ Simple selectors (Bộ chọn đơn giản)
     h1, h2, p {     /* bắt buộc phải có dấu , */
             text-align: center;
             color: red;
-}
+    }
+
 #2 Ba kiểu chèn CSS
 ● Inline CSS (Nội tuyến): Thêm thuộc tính style vào trong phần tử mà muốn sửa CSS.Chỉ nên dùng nếu chỉ có một phần tử sử dụng đoạn CSS đó.
             <h2 style="color:red;">Tiêu đề...</h2>
@@ -62,23 +63,59 @@ Simple selectors (Bộ chọn đơn giản)
     </style>
     <h2>Tiêu đề 1</h2>
 ● *External CSS (Bên ngoài): Thêm một file CSS, sau đó dùng thẻ <link /> đặt ở trong <head></head> và chèn đường dẫn file vào thuộc tính href.Áp dụng cho nhiều trang cần CSS chung.
+    <head>
+            <title>Page Title</title>
+            <link rel="stylesheet" href="style.css">
+    </head>
 
+#3 Colors, Backgrounds
+● Colors (màu sắc): Có 2 cách hay sử dụng là:
+          ● Đặt tên sẵn: white, black, red, green, blue, yellow, orange,...
+          ● HEX:
+                      Cú pháp: #RRGGBB
+                      ● Trong đó:
+                      ● RR: Red (đỏ)
+                      ● GG: Green (xanh lục)
+                      ● BB: blue (xanh dương)
+                      ● Ví dụ:
+                      ● #000000 (màu đen)
+                      ● #FFFFFF (màu trắng)
+                      ● #FF0000 (màu đỏ)
 
+● Background (nền): Dùng để thêm nền vào cho một phần tử. Tên thuộc tính: background
+        h2 {
+            color: #FF0000;
+            background: #000000;
+        }
 
+#4 Box Model, Borders, Padding, Margins
+Box Model (Mô hình hộp): Tất cả các element có thể được coi là các cái hộp.
+    ● Hộp này bao gồm:
+          ● Content (Nội dung) - Nội dung của element.
+          ● Padding (Phần đệm) – Khoảng cách giữa Content và Border.
+          ● Border (Đường viền): Đường viền bao quanh padding (phần đệm) và nội dung.
+          ● Margin (Lề) – Khoảng cách giữa các element.
+● Borders (Đường viền):
+          ● Đường viền bao quanh padding (phần đệm) và Content (Nội dung).
+          ● Dùng để bao bọc 1 phần tử.
+          ● Một số kiểu border:
+                ● dotted: Đường viền chấm
+                ● dashed: Đường viền nét đứt
+                ● solid : Đường viền liền
+● Padding (Phần đệm): Tạo một khoảng trống xung quanh nội dung, và nằm bên trong đường viền.
+cú pháp nhanh : trên phải dưới trái 
+padding:50px 50px 50px 50px;
+● Margin (Lề): Khoảng cách giữa phần tử này với phần tử khác. Margin nằm bên ngoài border.
+vd: padding-bottom: 50px;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+#5 Text, Fonts, Icons
+Text : 
+      ● color: Dùng để đặt màu cho chữ.
+      ● text-align: Dùng để thiết lập căn lề ngang cho văn bản.
+            ● left: Căn trái
+            ● right: Căn phải
+            ● center: Căn giữa
+            ● justify: Căn đều 2 bên
 
 
 
